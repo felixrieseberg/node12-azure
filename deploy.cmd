@@ -2,7 +2,7 @@
 
 :: --------------------------
 :: KUDU Deployment Script
-:: Modified to include io.js
+:: Modified to include Node 0.12
 :: by feriese@microsoft.com
 :: Based on version: 0.1.11
 :: --------------------------
@@ -96,9 +96,9 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
-:: 2. Dowloading io.js
+:: 2. Dowloading Node 0.12 (Stable)
 if not exist "D:\home\site\bin" mkdir D:\home\site\bin
-if not exist "D:\home\site\bin\node12" mkdir D:\home\site\bin\iojs
+if not exist "D:\home\site\bin\node12" mkdir D:\home\site\bin\node12
 call :ExecuteCmd curl -L -o D:\home\site\bin\node12\node.exe http://nodejs.org/dist/v0.12.0/x64/node.exe
 call :ExecuteCmd curl -L -o D:\home\site\bin\node12\node.lib http://nodejs.org/dist/v0.12.0/x64/node.lib
 call :ExecuteCmd curl -L -o D:\home\site\bin\node12\node.pdb http://nodejs.org/dist/v0.12.0/x64/node.pdb
