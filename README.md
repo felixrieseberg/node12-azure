@@ -1,6 +1,15 @@
 # [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/) Node 12 (Stable) on Azure Websites
 Want to use Azure Websites with the latest version of Node.js (0.12 Stable)? Simply include .deployment, deploy.cmd and iisnode.yml in your project. Done!
 
+## Update
+In the meantime, Node 12 has landed in Azure and does not need to be installed manually anymore. The code in this repo can still be used if you'd like to download and use a specific version of Node. If you just want to use Node 0.12, specify the engine version in your `package.json`:
+
+```
+{ "engines": 
+    { "node" : ">=0.12.0" } 
+}
+```
+
 ## Creating a Node.js Website from Scratch
 - Sign up for an Azure account. You can run up to 10 websites on Azure for free, so any account will do - for instance the [pay-as-you-go account with free trial credits](http://azure.microsoft.com/en-us/pricing/free-trial/) or the included accounts coming with [BizSpark for startups](http://www.bizspark.com) or the [GitHub Student Developer Pack](https://education.github.com/pack).
 
